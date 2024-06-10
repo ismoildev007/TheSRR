@@ -92,11 +92,14 @@
                     {{-- umumiy --}}
                     <div class="row">
                         <div class="col-md-4 mb-25">
+                            <input type="file" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="image" placeholder="Rasmni kiriting">
+                        </div>
+                        <div class="col-md-4 mb-25">
                             <input type="date" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="date" placeholder="sanani kiriting">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="layout-button mt-0">
-                                <a href="{{ route('partner.index')}}" class="btn btn-default btn-squared btn-light px-20">cancel</a>
+                                <a href="{{ route('news.index')}}" class="btn btn-default btn-squared btn-light px-20">cancel</a>
                                 <button type="submit" class="btn btn-primary btn-default btn-squared px-30">save</button>
                             </div>
                         </div>

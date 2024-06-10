@@ -38,10 +38,14 @@ class NewsController extends Controller
             'text_uz' => 'required|string|max:255',
             'text_ru' => 'required|string|max:255',
             'text_en' => 'required|string|max:255',
+            'image' => 'nullable|string',
             'date' => 'nullable|string',
         ]);
 
         $data = $validated;
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('post_photo');
+        }
 
         News::create($data);
 
@@ -76,10 +80,17 @@ class NewsController extends Controller
             'text_uz' => 'required|string|max:255',
             'text_ru' => 'required|string|max:255',
             'text_en' => 'required|string|max:255',
+            'image' => 'nullable|string',
             'date' => 'nullable|string',
         ]);
 
         $data = $validated;
+        if ($request->hasFile('image')) {
+            if ($news->image) {
+                Storage::delete($news->image);
+            }
+            $data['image'] = $request->file('image')->store('post_photo');
+        }
 
         $news->update($data);
 
@@ -91,6 +102,9 @@ class NewsController extends Controller
      */
     public function destroy(News $news)
     {
+        if ($news->image) {
+            Storage::delete($news->image);
+        }
 
         $news->delete();
 

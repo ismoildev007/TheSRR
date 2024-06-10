@@ -49,6 +49,14 @@ $lang = \Illuminate\Support\Facades\App::getLocale()
 
                             <div class="row">
                                 <div class="mb-3 col-md-4">
+                                    <label class="form-label">Image</label>
+                                    @if ($news->image)
+                                        <img src="{{ asset('storage/' . $news->image) }}" alt="Image" class="img-fluid">
+                                    @else
+                                        <p>No image available</p>
+                                    @endif
+                                </div>
+                                <div class="mb-3 col-md-4">
                                     <label class="form-label">sana</label>
                                     <span>{{ $news->date }}</span>
                                 </div>
