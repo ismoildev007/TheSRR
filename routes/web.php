@@ -64,6 +64,10 @@ Route::middleware(['checkRole:admin', 'auth'])->group(function () {
 */
 
 Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/about', [MainController::class, 'about'])->name('about');
+Route::get('/portfolio', [MainController::class, 'portfolio'])->name('portfolio');
+Route::get('/service', [MainController::class, 'service'])->name('service');
+Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/{lang}', function ($lang){
 
     session(['lang' => $lang]);

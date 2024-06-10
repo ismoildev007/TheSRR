@@ -1,4 +1,37 @@
 <x-layouts.main>
+
+    <!-- Start Header -->
+    <div class="fables-header fables-after-overlay overlay-lighter index-traingle bg-rules" style="background-image: url('/assets/images/tashTh.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-7 mr-auto index-carousel">
+                    <div class="owl-carousel owl-theme default-carousel nav-0 z-index mt-md-4 mt-xl-5 pt-md-4 pt-xl-5 dots-0 pb-md-5">
+                        <div class="pt-0 mt-0 pt-xl-5 mt-xl-5 wow slideInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                            <h1 class="fables-main-text-color font-weight-bold mb-1">Мы продвигаем ваш бизнес вместе
+                                <span class="fables-second-text-color">KIND OF BUSINESSES</span>
+                            </h1>
+                            <p class="fables-forth-text-colo mb-3 light-font fables-header-slider-details">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                            <a href="#" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">Our Services</a>
+                            <a href="#" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">Learn More</a>
+                        </div>
+                        <div class="pt-0 mt-0 pt-xl-5 mt-xl-5 wow slideInUp" data-wow-duration="2s" data-wow-delay=".8s">
+                            <h1 class="fables-main-text-color font-weight-bold mb-1">Мы продвигаем ваш бизнес вместе
+                                <span class="fables-second-text-color">KIND OF BUSINESSES</span>
+                            </h1>
+                            <p class="fables-forth-text-colo mb-3 light-font fables-header-slider-details">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                            <a href="#" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">Our Services</a>
+                            <a href="#" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /End Header -->
     <!-- Start page content -->
     <div class="container">
         <div class="row my-3 my-md-5 overflow-hidden">
@@ -33,7 +66,7 @@
                     <img src="/assets/images/cardTh.png" alt="" class="w-100">
                 </div>
                 <div class="col-12 col-lg-6 bg-white px-6 py-3 py-md-5 wow fadeInRight" data-wow-delay="1s" data-wow-duration="1.5s">
-                    <h2 class="font-30 font-weight-bold fables-second-text-color">WHY CHOOSE US</h2>
+                    <h2 class="font-30 font-weight-bold fables-second-text-color">4 причины выбрать нас</h2>
                     <p class="fables-main-text-color font-14 my-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur.
                     </p>
@@ -46,7 +79,7 @@
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Clean and modern websites , Clean and modern websites
+                                        Индивидуальный подход
                                     </button>
                                 </h5>
                             </div>
@@ -65,7 +98,7 @@
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Clean and modern websites
+                                        Соблюдение сроков
                                     </button>
                                 </h5>
                             </div>
@@ -83,7 +116,7 @@
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Clean and modern websites
+                                        Высокое качество работ
                                     </button>
                                 </h5>
                             </div>
@@ -101,7 +134,7 @@
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                        Clean and modern websites
+                                        Специалисты своего дела
                                     </button>
                                 </h5>
                             </div>
@@ -242,7 +275,7 @@
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <div class="text-center">
-                    <h2 class="fables-main-text-color font-35 font-weight-bold mb-4">Последние работы</h2>
+                    <h2 class="fables-main-text-color font-35 font-weight-bold mb-4">Наши отзывы</h2>
                     <p class="fables-forth-text-color">
                         Наши избранные и последние работы
                     </p>

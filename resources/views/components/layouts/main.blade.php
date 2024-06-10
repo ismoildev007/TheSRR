@@ -91,34 +91,19 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
 
                         <ul class="navbar-nav mx-auto fables-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="sub-nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="/">
                                     Home
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="sub-nav1">
-                                    <li><a class="dropdown-item" href="home1.html">Home 1</a></li>
-                                    <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
-                                    <li><a class="dropdown-item" href="home3.html">Home 3</a></li>
-                                    <li><a class="dropdown-item" href="home4.html">Home 4</a></li>
-                                </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="sub-nav3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    About
+                                <a class="nav-link" href="/about">
+                                    About Us
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="sub-nav3">
-                                    <li><a class="dropdown-item" href="about1.html">About 1</a></li>
-                                    <li><a class="dropdown-item" href="about2.html">About 2</a></li>
-                                    <li><a class="dropdown-item" href="about3.html">About 3</a></li>
-                                </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="sub-nav4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="/service">
                                     Service
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="sub-nav4">
-                                    <li><a class="dropdown-item" href="store_grid_list.html">Product Category </a></li>
-                                    <li><a class="dropdown-item" href="store_single.html">Product Single</a></li>
-                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="sub-nav5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -139,14 +124,14 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="sub-nav7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Contact Us
+                                <a class="nav-link" href="/contact">
+                                    Contact
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="sub-nav7">
-                                    <li><a class="dropdown-item" href="contactus1.html">Contact Us 1</a></li>
-                                    <li><a class="dropdown-item" href="contactus2.html">Contact Us 2</a></li>
-                                    <li><a class="dropdown-item" href="contactus3.html">Contact Us 3</a></li>
-                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="{{ route('portfolio') }}">
+                                    Portfolio
+                                </a>
                             </li>
                         </ul>
 
@@ -191,39 +176,6 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
         </div>
     </div>
 </div>
-
-<!-- Start Header -->
-<div class="fables-header fables-after-overlay overlay-lighter index-traingle bg-rules" style="background-image: url('/assets/images/tashTh.png');">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-lg-7 mr-auto index-carousel">
-                <div class="owl-carousel owl-theme default-carousel nav-0 z-index mt-md-4 mt-xl-5 pt-md-4 pt-xl-5 dots-0 pb-md-5">
-                    <div class="pt-0 mt-0 pt-xl-5 mt-xl-5 wow slideInUp" data-wow-duration="2s" data-wow-delay=".4s">
-                        <h1 class="fables-main-text-color font-weight-bold mb-1">Мы продвигаем ваш бизнес вместе
-                            <span class="fables-second-text-color">KIND OF BUSINESSES</span>
-                        </h1>
-                        <p class="fables-forth-text-colo mb-3 light-font fables-header-slider-details">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        </p>
-                        <a href="#" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">Our Services</a>
-                        <a href="#" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">Learn More</a>
-                    </div>
-                    <div class="pt-0 mt-0 pt-xl-5 mt-xl-5 wow slideInUp" data-wow-duration="2s" data-wow-delay=".8s">
-                        <h1 class="fables-main-text-color font-weight-bold mb-1">CONSULTING SERVICE FOR ALL
-                            <span class="fables-second-text-color">KIND OF BUSINESSES</span>
-                        </h1>
-                        <p class="fables-forth-text-colo mb-3 light-font fables-header-slider-details">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        </p>
-                        <a href="#" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">Our Services</a>
-                        <a href="#" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /End Header -->
 
 
 
