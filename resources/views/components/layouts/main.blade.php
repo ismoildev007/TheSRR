@@ -125,17 +125,9 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
                                     Blog
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="sub-nav5">
-                                    <li><a class="dropdown-item" href="blog-cat1.html">Blog Cat 1</a></li>
-                                    <li><a class="dropdown-item" href="blog-cat2.html">Blog Cat 2</a></li>
-                                    <li><a class="dropdown-item" href="blog-cat3.html">Blog Cat 3</a></li>
-                                    <li><a class="dropdown-item" href="blog-cat-masonry.html">Blog Cat Masonry</a></li>
-                                    <li><a class="dropdown-item" href="blog-details1.html">Blog Details 1</a></li>
-                                    <li><a class="dropdown-item" href="blog-details2.html">Blog Details 2</a></li>
-                                    <li><a class="dropdown-item" href="blog-details3.html">Blog Details 3</a></li>
-                                    <li><a class="dropdown-item" href="blog-single-img.html">Blog Single image</a></li>
-                                    <li><a class="dropdown-item" href="blog-single-slider.html">Blog Single Slider</a></li>
-                                    <li><a class="dropdown-item" href="blog-single-video.html">Blog Single Video</a></li>
-                                    <li><a class="dropdown-item" href="blog-timeLine.html">Blog Timeline</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('blog')}}">Blog</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('singleBlog')}}">Blog Details</a></li>
+                                   
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
