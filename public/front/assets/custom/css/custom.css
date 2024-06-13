@@ -85,8 +85,14 @@ body{
     line-height: 47px;
     display: inline-block;
     position: relative;
-    margin-left: 10px;
+    margin-top: -5px;
+    margin-left: 40px;
     padding: 0 !important;
+}
+@media (max-width: 993px) {
+    .fables-mega-menu-btn{
+        margin-top: 10px;
+    }
 }
 .fables-light-background-color a{
     color: #2C3E4F !important; 
@@ -1249,8 +1255,8 @@ body{
     bottom: -5px;
 }
 .inside-text-carousel{
-    width: 50%; 
-    float: left;
+    /*width: 500px;*/
+    /*float: left;*/
 }
 
 #cd-timeline{

@@ -1,6 +1,6 @@
 <?php
 
-    $lang = \Illuminate\Support\Facades\App::getLocale();
+$lang = \Illuminate\Support\Facades\App::getLocale();
 
 ?>
 
@@ -33,12 +33,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body ">
+                        <div class="card-body">
                             <table id="basic-datatable" class="table dt-responsive nowrap w-100">
                                 <thead>
                                 <tr>
                                     <th>Title {{ $lang }}</th>
-                                    <th>Description {{ $lang }}</th>
+                                    <th>Text {{ $lang }}</th>
                                     <th>Date</th>
                                     <th>Actions</th>
                                 </tr>
@@ -47,7 +47,7 @@
                                 @foreach($news as $new)
                                     <tr>
                                         <td>{{ $new['title_' . $lang] }}</td>
-                                        <td class="truncate-multiline">{!! $new['description_' . $lang] !!}</td>
+                                        <td class="truncate-multiline">{!! $new['text_' . $lang] !!}</td>
                                         <td>{{ $new->date }}</td>
                                         <td>
                                             <div class="mx-1 d-inline-block">
@@ -88,8 +88,10 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            const textContainer = document.getElementById('text-container');
-            truncateWords(textContainer, 35);
+            const textContainers = document.querySelectorAll('.truncate-multiline');
+            textContainers.forEach(function(container) {
+                truncateWords(container, 35);
+            });
         });
     </script>
 </x-layouts.admin>

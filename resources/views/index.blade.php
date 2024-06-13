@@ -1,3 +1,10 @@
+<?php
+
+$lang = \Illuminate\Support\Facades\App::getLocale();
+
+?>
+
+
 <x-layouts.main>
 
     <!-- Start Header -->
@@ -7,24 +14,16 @@
                 <div class="col-md-10 col-lg-7 mr-auto index-carousel">
                     <div class="owl-carousel owl-theme default-carousel nav-0 z-index mt-md-4 mt-xl-5 pt-md-4 pt-xl-5 dots-0 pb-md-5">
                         <div class="pt-0 mt-0 pt-xl-5 mt-xl-5 wow slideInUp" data-wow-duration="2s" data-wow-delay=".4s">
-                            <h1 class="fables-main-text-color font-weight-bold mb-1">Мы продвигаем ваш бизнес вместе
-                                <span class="fables-second-text-color">KIND OF BUSINESSES</span>
+                            <h1 class="fables-main-text-color font-weight-bold mb-1">{{ __('app.Business') }}
+                                <span class="fables-second-text-color">{{ __('app.Business_sir') }}</span>
                             </h1>
-                            <p class="fables-forth-text-colo mb-3 light-font fables-header-slider-details">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            </p>
-                            <a href="#" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">Our Services</a>
-                            <a href="#" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">Learn More</a>
+                            <a href="/service" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">{{ __('app.our_service') }}</a>
                         </div>
                         <div class="pt-0 mt-0 pt-xl-5 mt-xl-5 wow slideInUp" data-wow-duration="2s" data-wow-delay=".8s">
-                            <h1 class="fables-main-text-color font-weight-bold mb-1">Мы продвигаем ваш бизнес вместе
-                                <span class="fables-second-text-color">KIND OF BUSINESSES</span>
+                            <h1 class="fables-main-text-color font-weight-bold mb-1">{{ __('app.Business') }}
+                                <span class="fables-second-text-color">{{ __('app.Business_sir') }}</span>
                             </h1>
-                            <p class="fables-forth-text-colo mb-3 light-font fables-header-slider-details">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            </p>
-                            <a href="#" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">Our Services</a>
-                            <a href="#" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">Learn More</a>
+                            <a href="/service" class="btn fables-second-background-color fables-second-border-color white-color rounded-0 mr-4 px-3 px-md-4 py-2 bg-hover-transparent fables-second-hover-color">{{ __('app.our_service') }}</a>
                         </div>
                     </div>
                 </div>
@@ -39,21 +38,21 @@
                 <span class="fables-iconbussiness fables-second-text-color fa-3x"></span>
                 <h2 class="fables-main-text-color font-18 my-2">10 +</h2>
                 <p class="fables-forth-text-color font-15">
-                    годовой опыт
+                    {{ __('app.opit') }}
                 </p>
             </div>
             <div class="col-12 col-sm-6 col-lg-4 text-center mb-4 mb-lg-0 wow fadeInDown" data-wow-delay=".8s" data-wow-duration="1.5s">
                 <span class="fables-iconbussiness2 fables-second-text-color fa-3x"></span>
                 <h2 class="fables-main-text-color font-18 my-2">50 +</h2>
                 <p class="fables-forth-text-color font-15">
-                    специалисты
+                    {{ __('app.spets') }}
                 </p>
             </div>
             <div class="col-12 col-sm-6 col-lg-4 text-center mb-4 mb-lg-0 wow fadeInDown" data-wow-delay="1.2s" data-wow-duration="1.5s">
                 <span class="fables-iconbussiness3 fables-second-text-color fa-3x"></span>
                 <h2 class="fables-main-text-color font-18 my-2">4000 +</h2>
                 <p class="fables-forth-text-color font-15">
-                    завершенные проекты
+                    {{ __('app.project') }}
                 </p>
             </div>
         </div>
@@ -66,501 +65,197 @@
                     <img src="/assets/images/cardTh.png" alt="" class="w-100">
                 </div>
                 <div class="col-12 col-lg-6 bg-white px-6 py-3 py-md-5 wow fadeInRight" data-wow-delay="1s" data-wow-duration="1.5s">
-                    <h2 class="font-30 font-weight-bold fables-second-text-color">4 причины выбрать нас</h2>
+                    <h2 class="font-30 font-weight-bold fables-second-text-color">{{ __('app.prinsip') }}</h2>
                     <p class="fables-main-text-color font-14 my-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur.
+                        {{ __('app.prinsip_job') }}
                     </p>
                     <div id="accordion">
                         <div class="card border-0 mb-2">
                             <div class="card-header p-0 border bg-transparent rounded-0" id="headingOne">
                                 <h5 class="mb-0 position-relative">
-                                <span class="fables-second-background-color white-color d-inline-block
- position-absolute fables-lus-icon pt-2 text-center">
+                                <span class="fables-second-background-color white-color d-inline-block position-absolute fables-lus-icon pt-2 text-center">
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Индивидуальный подход
+                                        {{ __('app.prinsip1') }}
                                     </button>
                                 </h5>
-                            </div>
-
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur. quisquam consectetur culpa commodi maxime in harum
-                                </div>
                             </div>
                         </div>
                         <div class="card border-0 mb-2">
                             <div class="card-header bg-transparent p-0 border rounded-0" id="headingTwo">
                                 <h5 class="mb-0 position-relative">
-                                <span class="fables-second-background-color white-color d-inline-block
- position-absolute fables-lus-icon pt-2 text-center">
+                                <span class="fables-second-background-color white-color d-inline-block position-absolute fables-lus-icon pt-2 text-center">
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Соблюдение сроков
+                                        {{ __('app.prinsip2') }}
                                     </button>
                                 </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur. quisquam consectetur culpa commodi maxime in harum
-                                </div>
                             </div>
                         </div>
                         <div class="card border-0 mb-2">
                             <div class="card-header p-0 border bg-transparent rounded-0" id="headingThree">
                                 <h5 class="mb-0 position-relative">
-                                <span class="fables-second-background-color white-color d-inline-block
- position-absolute fables-lus-icon pt-2 text-center">
+                                <span class="fables-second-background-color white-color d-inline-block position-absolute fables-lus-icon pt-2 text-center">
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Высокое качество работ
+                                        {{ __('app.prinsip3') }}
                                     </button>
                                 </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur. quisquam consectetur culpa commodi maxime in harum
-                                </div>
                             </div>
                         </div>
                         <div class="card border-0 mb-2">
                             <div class="card-header p-0 border bg-transparent rounded-0" id="headingfour">
                                 <h5 class="mb-0 position-relative">
-                                <span class="fables-second-background-color white-color d-inline-block
- position-absolute fables-lus-icon pt-2 text-center">
+                                <span class="fables-second-background-color white-color d-inline-block position-absolute fables-lus-icon pt-2 text-center">
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                        Специалисты своего дела
+                                        {{ __('app.prinsip4') }}
                                     </button>
                                 </h5>
                             </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
-                                <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur. quisquam consectetur culpa commodi maxime in harum
-                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ======= Faq ======= -->
+    <section id="faq" class="faq section-bg">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>{{ __('app.question') }}</h2>
+
+            </div>
+
+            <div class="faq-list">
+                <ul>
+                    @foreach($questions as $key => $question)
+                        <li data-aos="fade-up">
+                            <i class="bx bx-help-circle icon-help"></i>
+                            <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-{{ $key }}">
+                                {{ $question['title_' . $lang] }}
+                                <i class="bx bx-chevron-down icon-show"></i>
+                                <i class="bx bx-chevron-up icon-close"></i>
+                            </a>
+                            <div id="faq-list-{{ $key }}" class="collapse {{ $key == 0 ? 'show' : '' }}" data-bs-parent=".faq-list">
+                                <p>{!! $question['description_' . $lang] !!}</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
 
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
-                <h2 class="fables-second-text-color font-35 font-weight-bold my-3 mt-md-5 mb-md-4">we are creative agency</h2>
-                <p class="fables-forth-text-color">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur.
-                    quisquam consectetur culpa commodi maxime in harum sunt nam. Minima, repellat aspernatur atque voluptate dolores quos vel dolor! Debitis, consequatur, aliquid.
-                </p>
-            </div>
-        </div>
-        <div class="row mt-4 mt-md-5">
-            <div class="col-6 col-md-3">
-                <div class="fables-counter">
-                    <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="307">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">SATISFIED CLIENTS</h3>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="fables-counter">
-                    <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="95">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">COMPANY MEMBERS</h3>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="fables-counter">
-                    <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="55">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">AWWARDS WIN</h3>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="fables-counter">
-                    <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="16">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">YEARS EXPIRIENCE</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fables-price-bg fables-after-overlay py-4 py-lg-5 my-4 my-lg-5 bg-rules overflow-hidden">
-        <div class="container position-relative z-index">
-            <h2 class="white-color font-35 font-weight-bold text-center mb-4 mb-md-5">Our Pricing</h2>
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-3 text-center mb-4 mb-lg-0 wow bounceInDown" data-wow-delay=".4s" data-wow-duration="1.5s">
-                    <div class="table-border-light fables-second-hover-border colored-table">
-                        <div class="bg-blue py-4">
-                            <h2 class="white-color font-weight-bold position-relative fables-third-after font-30 table-title">Starter</h2>
-                            <h2 class="white-color font-weight-bold font-35 position-relative mt-4 d-inline-block">100 <span class="table-badge white-color position-absolute">$</span></h2>
-                            <p class="white-color font-13 mb-4">Per month</p>
-                            <span class="fables-table-arrow border-2 bg-blue white-color rounded-circle border-white position-absolute"><i class="fas fa-arrow-down"></i></span>
-                        </div>
-                        <div class="bg-white py-4">
-                            <p class="fables-forth-text-color my-4 px-4 line-height-large font-15">
-                                Wordpress ThemeFree
-                                Theme InstallationFree
-                                24/7 SupportFree
-                            </p>
-                            <a href="#" class="btn fables-second-background-color white-color white-color-hover fables-btn-rounded px-4 py-2">Purchase Now</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3 text-center mb-4 mb-lg-0 wow bounceInDown" data-wow-delay=".8s" data-wow-duration="1.5s">
-                    <div class="table-border-light fables-second-hover-border colored-table">
-                        <div class="fables-second-background-color py-4">
-                            <h2 class="white-color font-weight-bold position-relative fables-third-after font-30 table-title">Basic</h2>
-                            <h2 class="white-color font-weight-bold font-35 position-relative mt-4 d-inline-block">200 <span class="table-badge white-color position-absolute">$</span></h2>
-                            <p class="white-color font-13 mb-4">Per month</p>
-                            <span class="fables-table-arrow border-2 fables-second-background-color white-color rounded-circle border-white position-absolute"><i class="fas fa-arrow-down"></i></span>
-                        </div>
-                        <div class="bg-white py-4">
-                            <p class="fables-forth-text-color my-4 px-4 line-height-large font-15">
-                                Wordpress ThemeFree
-                                Theme InstallationFree
-                                24/7 SupportFree
-                            </p>
-                            <a href="#" class="btn fables-second-background-color white-color white-color-hover fables-btn-rounded px-4 py-2">Purchase Now</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3 text-center mb-4 mb-lg-0 wow bounceInDown" data-wow-delay="1.2s" data-wow-duration="1.5s">
-                    <div class="table-border-light fables-second-hover-border colored-table">
-                        <div class="bg-primary py-4">
-                            <h2 class="white-color font-weight-bold position-relative fables-third-after font-30 table-title">Pro</h2>
-                            <h2 class="white-color font-weight-bold font-35 position-relative mt-4 d-inline-block">300 <span class="table-badge white-color position-absolute">$</span></h2>
-                            <p class="white-color font-13 mb-4">Per month</p>
-                            <span class="fables-table-arrow border-2 bg-primary white-color rounded-circle border-white position-absolute"><i class="fas fa-arrow-down"></i></span>
-                        </div>
-                        <div class="bg-white py-4">
-                            <p class="fables-forth-text-color my-4 px-4 line-height-large font-15">
-                                Wordpress ThemeFree
-                                Theme InstallationFree
-                                24/7 SupportFree
-                            </p>
-                            <a href="#" class="btn fables-second-background-color white-color white-color-hover fables-btn-rounded px-4 py-2">Purchase Now</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3 text-center mb-4 mb-lg-0 wow bounceInDown" data-wow-delay="1.6s" data-wow-duration="1.5s">
-                    <div class="table-border-light fables-second-hover-border colored-table">
-                        <div class="fables-main-background-color py-4">
-                            <h2 class="white-color font-weight-bold position-relative fables-third-after font-30 table-title">Ultra</h2>
-                            <h2 class="white-color font-weight-bold font-35 position-relative mt-4 d-inline-block">500 <span class="table-badge white-color position-absolute">$</span></h2>
-                            <p class="white-color font-13 mb-4">Per month</p>
-                            <span class="fables-table-arrow border-2 fables-main-background-color white-color rounded-circle border-white position-absolute"><i class="fas fa-arrow-down"></i></span>
-                        </div>
-                        <div class="bg-white py-4">
-                            <p class="fables-forth-text-color my-4 px-4 line-height-large font-15">
-                                Wordpress ThemeFree
-                                Theme InstallationFree
-                                24/7 SupportFree
-                            </p>
-                            <a href="#" class="btn fables-second-background-color white-color white-color-hover fables-btn-rounded px-4 py-2">Purchase Now</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+    {{--    Portfolio--}}
     <div class="container mb-4 mb-md-5">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <div class="text-center">
-                    <h2 class="fables-main-text-color font-35 font-weight-bold mb-4">Наши отзывы</h2>
-                    <p class="fables-forth-text-color">
-                        Наши избранные и последние работы
-                    </p>
+                    <h2 class="fables-main-text-color font-35 font-weight-bold mb-3 mt-3">{{ __('app.portfolio') }}</h2>
                 </div>
             </div>
         </div>
 
         <div class="gallery-filter">
-            <div class="portfolioFilter my-3 clearfix">
-                <a href="#" data-filter="*" class="current">ALL</a>
-                <a href="#" data-filter=".webDesign" class="fables-forth-text-color">Web design</a>
-                <a href="#" data-filter=".appDesign" class="fables-forth-text-color">App design</a>
-                <a href="#" data-filter=".brand" class="fables-forth-text-color">Brand</a>
-                <a href="#" data-filter=".development" class="fables-forth-text-color">Development</a>
-            </div>
+{{--            <div class="portfolioFilter my-3 clearfix">--}}
+{{--                <a href="#" data-filter="*" class="current">ALL</a>--}}
+{{--                <a href="#" data-filter=".1" class="fables-forth-text-color">Service 1</a>--}}
+{{--                <a href="#" data-filter=".2" class="fables-forth-text-color">Service 2</a>--}}
+{{--                <a href="#" data-filter=".3" class="fables-forth-text-color">Service 3</a>--}}
+{{--                <a href="#" data-filter=".4" class="fables-forth-text-color">Service 4</a>--}}
+{{--            </div>--}}
             <div class="portfolioContainer row filter-masonry">
-                <div class="drawings places col-sm-6 col-md-3 mb-2">
-                    <div class="filter-img-block position-relative image-container translate-effect-right">
-                        <img src="/front/assets/custom/images/thecard1.png" alt="image" class="w-100">
-                        <div class="img-filter-overlay fables-main-color-transparent row m-0">
-                            <a href="#" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconlink"></span></a>
-                            <a data-fancybox="gallery" href="/front/assets/custom/images/thecard1.png" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconsearch-icon"></span></a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="webDesign food col-sm-6 col-md-3 mb-2">
-                    <div class="filter-img-block position-relative image-container translate-effect-right">
-                        <img src="/front/assets/custom/images/safia.jpg" alt="image" class="w-100">
-                        <div class="img-filter-overlay fables-main-color-transparent row m-0">
-                            <a href="#" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconlink"></span></a>
-                            <a data-fancybox="gallery" href="/front/assets/custom/images/safia.jpg" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconsearch-icon"></span></a>
+                @foreach($portfolios as $port)
+                    <div class="{{ $port->portfolio_id }} food col-sm-6 col-md-3 mb-2">
+                        <div class="filter-img-block position-relative image-container translate-effect-right">
+                            <img src="{{ asset('storage/' . $port->image) }}" alt="image" class="w-100">
+                            <div class="img-filter-overlay fables-main-color-transparent row m-0">
+                                <a href="#" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconlink"></span></a>
+                                <a data-fancybox="gallery" href="{{ asset('storage/' . $port->image) }}" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconsearch-icon"></span></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="webDesign objects col-sm-6 col-md-3 mb-2">
-                    <div class="filter-img-block position-relative image-container translate-effect-right">
-                        <img src="/front/assets/custom/images/artel.jpg" alt="image" class="w-100">
-                        <div class="img-filter-overlay fables-main-color-transparent row m-0">
-                            <a href="#" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconlink"></span></a>
-                            <a  data-fancybox="gallery" href="/front/assets/custom/images/artel.jpg" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconsearch-icon"></span></a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="appDesign brand col-sm-6 col-md-3 mb-2">
-                    <div class="filter-img-block position-relative image-container translate-effect-right">
-                        <img src="/front/assets/custom/images/thecard5.jpg" alt="image" class="w-100">
-                        <div class="img-filter-overlay fables-main-color-transparent row m-0">
-                            <a href="#" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconlink"></span></a>
-                            <a data-fancybox="gallery" href="/front/assets/custom/images/thecard5.jpg" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconsearch-icon"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="webDesign col-sm-6 col-md-3 mb-2">
-                    <div class="filter-img-block position-relative image-container translate-effect-right">
-                        <img src="/front/assets/custom/images/thecard4.jpg" alt="image" class="w-100">
-                        <div class="img-filter-overlay fables-main-color-transparent row m-0">
-                            <a href="#" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconlink"></span></a>
-                            <a data-fancybox="gallery" href="/front/assets/custom/images/thecard4.jpg" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconsearch-icon"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="webDesign col-sm-6 col-md-3 mb-2">
-                    <div class="filter-img-block position-relative image-container translate-effect-right">
-                        <img src="/front/assets/custom/images/bydcard.jpg" alt="image" class="w-100">
-                        <div class="img-filter-overlay fables-main-color-transparent row m-0">
-                            <a href="#" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconlink"></span></a>
-                            <a data-fancybox="gallery" href="/front/assets/custom/images/bydcard.jpg" class="gallery-filter-icon white-color fables-second-hover-color"><span class="fables-iconsearch-icon"></span></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
 
             </div>
             <div class="text-center">
-                <a href="#" class="btn fables-main-border-color fables-main-text-color mt-md-4 px-5 py-2 fables-btn-rounded fables-main-hover-background-color white-color-hover">Show All Projects</a>
+                <a href="/portfolio" class="btn fables-main-border-color fables-main-text-color mt-md-4 px-5 py-2 fables-btn-rounded fables-main-hover-background-color white-color-hover">{{ __('app.show') }}</a>
             </div>
         </div>
     </div>
+    {{--    Portfolio end--}}
     <div class="fables-testimonial fables-after-overlay py-5 bg-rules">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8">
                     <div class="fables-contact-caption-txt">
-                        <h3 class="font-25 font-weight-bold white-color mb-3 position-relative z-index">We are the best business consulting company ever!!</h3>
-                        <p class="fables-third-text-color position-relative z-index font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lorem pretium laoreet enim at, malesuada Class aptent taciti sociosqu.</p>
+                        <h3 class="font-25 font-weight-bold white-color mb-3 position-relative z-index">{{ __('app.consulting') }}</h3>
+                        <p class="fables-third-text-color position-relative z-index font-weight-light">{{ __('app.contact_us') }}</p>
 
                     </div>
                 </div>
                 <div class="col-12 col-md-4 offset-xl-2 col-xl-2 text-center">
-                    <a href="contactus1.html" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">Contact us</a>
+                    <a href="/contact" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">{{ __('app.contact') }}</a>
                 </div>
             </div>
 
         </div>
     </div>
+    {{--    News Blog elementlari start --}}
     <div class="container">
         <div class="row overflow-hidden">
             <div class="col-12">
-                <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-4 my-lg-5">Latest News</h2>
+                <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-4 my-lg-5">{{ __('app.news') }}</h2>
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay=".4s" data-wow-duration="1.5s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="/front/assets/custom/images/thecard1.png" alt=""></a>
-                </div>
-                <h2 class="font-18 semi-font font-18  mt-3"><a href="#" class="fables-main-text-color fables-second-hover-color">Getting to Another Level of Design</a></h2>
-                <p class="fables-fifth-text-color font-13 my-1">09 November, 2018</p>
-                <p class="fables-forth-text-color font-14">
-                    When you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality. the choices are versatile Assuming that you will goWhen you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality.
-                </p>
-                <a href="" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2">Read More</a>
+           @foreach($blogs as $blog)
+                <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay=".4s" data-wow-duration="1.5s">
+                    <div class="image-container translate-effect-right">
+                        <a href="#"><img src="{{ asset('storage/' . $blog->image) }}" alt=""></a>
+                    </div>
+                    <h2 class="font-18 semi-font font-18  mt-3"><a href="#" class="fables-main-text-color fables-second-hover-color">{{ $blog['title_' . $lang] }}</a></h2>
+                    <p class="fables-fifth-text-color font-13 my-1">{{ $blog->date }}</p>
+                    <p class="fables-forth-text-color font-14">
+                        {!! $blog['text_' . $lang] !!}
+                    </p>
+                    <a href="/blog" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2">{{ __('app.show') }}</a>
 
-            </div>
-            <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay=".8s" data-wow-duration="1.5s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="/front/assets/custom/images/thecard2.png" alt=""></a>
                 </div>
-                <h2 class="font-18 semi-font font-18  mt-3"><a href="#" class="fables-main-text-color fables-second-hover-color">Getting to Another Level of Design</a></h2>
-                <p class="fables-fifth-text-color font-13 my-1">09 November, 2018</p>
-                <p class="fables-forth-text-color font-14">
-                    When you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality. the choices are versatile Assuming that you will goWhen you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality.
-                </p>
-                <a href="" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2">Read More</a>
-
-            </div>
-            <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="1.5s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="/front/assets/custom/images/thecard3.jpg" alt=""></a>
-                </div>
-                <h2 class="font-18 semi-font font-18  mt-3"><a href="#" class="fables-main-text-color fables-second-hover-color">Getting to Another Level of Design</a></h2>
-                <p class="fables-fifth-text-color font-13 my-1">09 November, 2018</p>
-                <p class="fables-forth-text-color font-14">
-                    When you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality. the choices are versatile Assuming that you will goWhen you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality.
-                </p>
-                <a href="" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2">Read More</a>
-
-            </div>
+           @endforeach
         </div>
     </div>
+    {{--    News Blog elementlari end--}}
+    {{--    klientlar commentariyasi start--}}
     <div class="fables-testimonial fables-after-overlay py-4 py-lg-5 bg-rules">
         <div class="container">
-            <h2 class="position-relative z-index white-color font-35 font-weight-bold text-center mb-4">Testimonial</h2>
+            <h2 class="position-relative z-index white-color font-35 font-weight-bold text-center mb-4">{{ __('app.commit') }}</h2>
             <div class="owl-carousel owl-theme" id="fables-testimonial-carousel">
-                <div class="row text-center fables-testimonial-carousel-item rounded py-4">
-                    <div class="col-12 col-md-3">
-                        <img src="/front/assets/custom/images/testimonial-img.png" alt="Fables Template" class="fables-testimonial-carousel-img">
-                        <h3 class="font-14 semi-font text-white">Billy Richards</h3>
-                        <h3 class="font-14 font-italic text-white mt-2">Chief Manager, Simba Co</h3>
-                    </div>
-                    <div class="col-12 col-md-9 p-0 p-md-2">
-                        <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            No matter what issue or questions pops up, you are always there to
-                            assist me. Thank you so much for your excellent assistance and great
-                            customer support through years.
+                @foreach($commits as $commit)
+                    <div class="row text-center fables-testimonial-carousel-item rounded py-4">
+                        <div class="col-12 col-md-3">
+                            <img src="{{ asset('storage/' . $commit->image) }}" alt="Fables Template" class="fables-testimonial-carousel-img">
+                            <h3 class="font-14 semi-font text-white">{{ $commit->name }}</h3>
+                        </div>
+                        <div class="col-12 col-md-9 p-0 p-md-2">
+                            <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
+                                {!! $commit['description_' . $lang] !!}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center fables-testimonial-carousel-item rounded py-4">
-                    <div class="col-12 col-md-3">
-                        <img src="/front/assets/custom/images/testimonial-img.png" alt="Fables Template" class="fables-testimonial-carousel-img">
-                        <h3 class="font-14 semi-font text-white">Billy Richards</h3>
-                        <h3 class="font-14 font-italic text-white mt-2">Chief Manager, Simba Co</h3>
-                    </div>
-                    <div class="col-12 col-md-9 p-0 p-md-2">
-                        <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            No matter what issue or questions pops up, you are always there to
-                            assist me. Thank you so much for your excellent assistance and great
-                            customer support through years.
-                        </div>
-                    </div>
-                </div>
-
-
+                @endforeach
             </div>
         </div>
     </div>
-    <div class="container">
-        <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-3 my-lg-5">Team</h2>
-        <div class="row overflow-hidden">
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay=".4s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="/front/assets/custom/images/team3-1.jpg" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay=".8s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="/front/assets/custom/images/team3-2.jpg" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay="1.2s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="/front/assets/custom/images/team3-1.jpg" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay="1.6s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="/front/assets/custom/images/team3-2.jpg" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 my-lg-5">
-
-            <div class="owl-carousel owl-theme px-6 my-0" id="fables-partner-carousel">
-                <div>
-                    <img src="/front/assets/custom/images/partner2-1.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-2.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-3.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-4.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-3.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-1.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-2.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-3.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-                <div>
-                    <img src="/front/assets/custom/images/partner2-4.jpg" alt="Fables Template" class="fables-partner-carousel-img">
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    {{--    klientlar commentariyasi end--}}
 
     <!-- /End page content -->
 
@@ -569,7 +264,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-2 mb-5 text-center">
-                    <h2 class="font-30 semi-font mb-5">Newsletter</h2>
+                    <h2 class="font-30 semi-font mb-5">{{ __('app.newsLetter') }}</h2>
                     <form class="form-inline position-relative">
                         <div class="form-group fables-subscribe-formgroup">
                             <input type="email" class="form-control fables-subscribe-input fables-btn-rouned" placeholder="Your Email">
@@ -579,39 +274,42 @@
 
                 </div>
                 <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                    <a href="#" class="fables-second-border-color border-bottom pb-3 d-block mb-3 mt-minus-13"><img src="/front/assets/custom/images/fables-logo.png" alt="fables template"></a>
+                    <a href="#" class="fables-second-border-color border-bottom pb-3 d-block mb-3 mt-minus-13"><img src="/front/tash.png" alt="fables template" style="width: 105px;"></a>
                     <p class="font-15 fables-third-text-color">
-                        t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
-                        <br><br>
-                        t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        {{ __('app.footer_text') }}
                     </p>
 
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <h2 class="font-20 semi-font fables-second-border-color border-bottom pb-3">Contact us</h2>
-                    <div class="my-3">
-                        <h4 class="font-16 semi-font"><span class="fables-iconmap-icon fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span> Address Information</h4>
-                        <p class="font-14 fables-fifth-text-color mt-2 ml-4">level13, 2Elizabeth St, Melbourne, Victor 2000</p>
+                @foreach($contacts as $contact)
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <h2 class="font-20 semi-font fables-second-border-color border-bottom pb-3">{{ __('app.contact') }}</h2>
+                        <div class="my-3">
+                            <h4 class="font-16 semi-font"><span class="fables-iconmap-icon fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span>{{ __('app.address') }}</h4>
+                            <p class="font-14 fables-fifth-text-color mt-2 ml-4">{{ $contact->address }}</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="font-16 semi-font"><span class="fables-iconphone fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span>
+                                @if($lang === 'en') Call Now @endif
+                                @if($lang === 'uz') Hozir qo'ng'iroq qiling @endif
+                                @if($lang === 'ru') Позвони сейчас @endif
+                            </h4>
+                            <p class="font-14 fables-fifth-text-color mt-2 ml-4">{{ $contact->number }}</p>
+                        </div>
+                        <div class="my-3">
+                            <h4 class="font-16 semi-font"><span class="fables-iconemail fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span> Mail </h4>
+                            <p class="font-14 fables-fifth-text-color mt-2 ml-4">{{ $contact->email }}</p>
+                        </div>
                     </div>
-                    <div class="my-3">
-                        <h4 class="font-16 semi-font"><span class="fables-iconphone fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span> Call Now </h4>
-                        <p class="font-14 fables-fifth-text-color mt-2 ml-4">+333 111 111 000</p>
-                    </div>
-                    <div class="my-3">
-                        <h4 class="font-16 semi-font"><span class="fables-iconemail fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span> Mail </h4>
-                        <p class="font-14 fables-fifth-text-color mt-2 ml-4">adminsupport@website.com</p>
-                    </div>
-                </div>
+                @endforeach
                 <div class="col-12 col-sm-6 col-lg-4">
                     <h2 class="font-20 semi-font fables-second-border-color border-bottom pb-3 mb-3">EXPLORE OUR SITE</h2>
                     <ul class="nav fables-footer-links">
-                        <li><a href="about1.html">About Us</a></li>
-                        <li><a href="contactus1.html">Contact Us</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="/about">{{ __('app.about') }}</a></li>
+                        <li><a href="/contact">{{ __('app.contact') }}</a></li>
+                        <li><a href="/portfolio">{{ __('app.portfolio') }}</a></li>
+                        <li><a href="/blog">{{ __('app.blog') }}</a></li>
+                        <li><a href="/service">{{ __('app.service') }}</a></li>
                     </ul>
                 </div>
 
@@ -619,18 +317,17 @@
 
         </div>
     </div>
-    <div class="copyright fables-main-background-color mt-0 border-0 white-color">
-        <ul class="nav fables-footer-social-links just-center fables-light-footer-links">
-            <li><a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
-        <p class="mb-0">Copyright © Fables 2018. All rights reserved.</p>
+    @foreach($internation as $internet)
+        <div class="copyright fables-main-background-color mt-0 border-0 white-color">
+            <ul class="nav fables-footer-social-links just-center fables-light-footer-links">
+                <li><a href="{{ $internet->telegram }}" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                <li><a href="{{ $internet->facebook }}" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="{{ $internet->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="{{ $internet->linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <p class="mb-0">Copyright © THE SRR 2018. All rights reserved.</p>
 
-    </div>
-
+        </div>
+    @endforeach
     <!-- /End Footer 2 Background Image -->
 </x-layouts.main>

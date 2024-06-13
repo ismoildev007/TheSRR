@@ -1,3 +1,11 @@
+<?php
+
+
+$lang = \Illuminate\Support\Facades\App::getLocale();
+
+?>
+
+
 <x-layouts.admin>
     <div class="px-3">
         <!-- Start Content-->
@@ -39,7 +47,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row d-none">
                         <div class="col-md-4 mb-25 my-5 uz">
                             <label for="text_uz" class="form-label">Text_uz</label>
                             <input type="text" id="text_uz" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_uz" value="{{ $service->text_uz }}" placeholder="Title UZ">
@@ -52,6 +60,16 @@
                             <label for="text_en" class="form-label">Text_en</label>
                             <input type="text" id="text_en" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_en" value="{{ $service->text_en }}" placeholder="Title EN">
                         </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <label for="" class="form-label">Category name</label>
+                        <select name="category_id" class="form-control" id="">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}" {{ old('category', $service->category_id) == $category->id ? 'selected : ' : '' }}>
+                                    {{ $category['name_' . $lang] }}
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
 
                     {{-- description_uz --}}

@@ -13,13 +13,13 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
             <div class="py-3 py-lg-4">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h4 class="page-title mb-0">Ochiq malumotlar</h4>
+                        <h4 class="page-title mb-0">Ko'p beriladigan savollar</h4>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-none d-lg-block">
                             <ol class="breadcrumb m-0 float-end">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Bosh sahifa</a></li>
-                                <li class="breadcrumb-item active">Ochiq malumotlar</li>
+                                <li class="breadcrumb-item active">Ko'p beriladigan savollar</li>
                             </ol>
                         </div>
                     </div>
@@ -38,8 +38,8 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                             <table id="basic-datatable" class="table dt-responsive nowrap w-100">
                                 <thead>
                                 <tr>
-                                    <th>Title {{ $lang }}</th>
-                                    <th>Category name {{ $lang }}</th>
+                                    <th>Savol {{ $lang }}</th>
+                                    <th>Javob {{ $lang }}</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -47,7 +47,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                 @foreach($posts as $info)
                                     <tr>
                                         <td>{{ $info['title_' . $lang] }}</td>
-                                        <td>{!! $info->post_category['name_' . $lang] !!}</td>
+                                        <td>{!! $info['description_' . $lang] !!}</td>
                                         <td>
                                             <div class="mx-1 d-inline-block">
                                                 <a href="{{ route('post.edit', $info->id) }}"><i class="mdi mdi-book-edit-outline fs-3"></i></a>

@@ -26,25 +26,17 @@
                     {{-- uz --}}
                     <div class="row uz">
                         <div class="col-md-4 mb-25 my-5 uz">
-                            <label for="title_uz" class="form-label">Title_uz</label>
-                            <input type="text" id="title_uz" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_uz" value="{{ $post->title_uz }}" placeholder="Title UZ">
+                            <label for="title_uz" class="form-label">Savol uz</label>
+                            <input type="text" id="title_uz" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_uz" value="{{ $post->title_uz }}" placeholder="Savol UZ">
                         </div>
                         <div class="col-md-4 mb-25 my-5 ru">
-                            <label for="title_ru" class="form-label">Title_ru</label>
-                            <input type="text" id="title_ru" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_ru" value="{{ $post->title_ru }}" placeholder="Title RU">
+                            <label for="title_ru" class="form-label">Savol ru</label>
+                            <input type="text" id="title_ru" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_ru" value="{{ $post->title_ru }}" placeholder="TitSavole RU">
                         </div>
                         <div class="col-md-4 mb-25 my-5 en">
-                            <label for="title_en" class="form-label">Title_en</label>
-                            <input type="text" id="title_en" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_en" value="{{ $post->title_en }}" placeholder="Title EN">
+                            <label for="title_en" class="form-label">Savol en</label>
+                            <input type="text" id="title_en" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_en" value="{{ $post->title_en }}" placeholder="Savol EN">
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-5">
-                        <label for="" class="form-label">Category name</label>
-                        <select name="post_category_id" class="form-control" id="">
-                            @foreach($postCategories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name_uz }}</option>
-                            @endforeach
-                        </select>
                     </div>
 
                     {{-- description_uz --}}
@@ -53,7 +45,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Description_uz</h4>
+                                        <h4 class="header-title">Javob uz</h4>
                                         <p class="sub-header">Snow is a clean, flat toolbar theme.</p>
                                         <div id="editor_uz" style="height: 300px;">
                                             {!! $post->description_uz !!}
@@ -71,7 +63,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Description_ru</h4>
+                                        <h4 class="header-title">Javob ru</h4>
                                         <p class="sub-header">Snow is a clean, flat toolbar theme.</p>
                                         <div id="editor_ru" style="height: 300px;">
                                             {!! $post->description_ru !!}
@@ -89,7 +81,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Description_en</h4>
+                                        <h4 class="header-title">Javob en</h4>
                                         <p class="sub-header">Snow is a clean, flat toolbar theme.</p>
                                         <div id="editor_en" style="height: 300px;">
                                             {!! $post->description_en !!}
@@ -103,12 +95,6 @@
 
                     {{-- umumiy --}}
                     <div class="row">
-                        <div class="col-md-4 mb-25">
-                            <input type="file" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="image" placeholder="Rasmni kiriting">
-                            @if ($post->image)
-                                <img src="{{ asset('storage/' . $post->image) }}" alt="image" class="img-fluid">
-                            @endif
-                        </div>
                         <div class="col-md-6">
                             <div class="layout-button mt-0">
                                 <a href="{{ route('post.index') }}" class="btn btn-default btn-squared btn-light px-20">Cancel</a>

@@ -1,3 +1,10 @@
+<?php
+
+
+$lang = \Illuminate\Support\Facades\App::getLocale();
+
+?>
+
 <x-layouts.admin>
     <div class="px-3">
         <!-- Start Content-->
@@ -6,7 +13,7 @@
             <div class="py-3 py-lg-4">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h4 class="page-title mb-0">Ochiq malumotlar</h4>
+                        <h4 class="page-title mb-0">Portfolio malumotlar</h4>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-none d-lg-block">
@@ -24,24 +31,35 @@
                     @csrf
                     {{-- uz --}}
                     <div class="row">
-                        <div class="col-md-4 mb-25 my-5 uz">
+                        <div class="col-md-4 mb-25 my-5 ">
                             <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_uz" placeholder="Title UZ">
+                            @error('title_uz')
+                                <label for="" class="form-label text-danger">Title uz bo'sh bo'lishi mumkin emas</label>
+                            @enderror
                         </div>
-                        <div class="col-md-4 mb-25 my-5 ru">
+                        <div class="col-md-4 mb-25 my-5 ">
                             <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_ru" placeholder="Title RU">
+                            @error('title_ru')
+                            <label for="" class="form-label text-danger">Title ru bo'sh bo'lishi mumkin emas</label>
+                            @enderror
                         </div>
-                        <div class="col-md-4 mb-25 my-5 en">
+                        <div class="col-md-4 mb-25 my-5 ">
                             <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="title_en" placeholder="Title EN">
+                            @error('title_en')
+                            <label for="" class="form-label text-danger">Title en bo'sh bo'lishi mumkin emas</label>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="col-md-4 mb-5">
-                        <select name="category_id" class="form-control" id="">
+                        <label for="" class="form-label">Category name</label>
+                        <select name="portfolio_id" class="form-control" id="">
                             @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name_uz }}</option>
+                                <option value="{{ $category->id }}">{{ $category['name_' . $lang] }}</option>
                             @endforeach
                         </select>
                     </div>
+
 
                     {{-- description_uz --}}
                     <div class="container-fluid uz">

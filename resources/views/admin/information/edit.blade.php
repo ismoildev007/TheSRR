@@ -1,3 +1,9 @@
+<?php
+
+$lang = \Illuminate\Support\Facades\App::getLocale();
+
+?>
+
 <x-layouts.admin>
     <div class="px-3">
         <!-- Start Content-->
@@ -6,7 +12,7 @@
             <div class="py-3 py-lg-4">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h4 class="page-title mb-0">Hamkorni tahrirlash</h4>
+                        <h4 class="page-title mb-0">Portfolio tahrirlash</h4>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-none d-lg-block">
@@ -40,9 +46,11 @@
                     </div>
                     <div class="col-md-4 mb-5">
                         <label for="" class="form-label">Category name</label>
-                        <select name="category_id" class="form-control" id="">
-                            @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name_uz }}</option>
+                        <select name="portfolio_id" class="form-control" id="">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}" {{ old('category', $information->portfolio_id) == $category->id ? 'selected : ' : '' }}>
+                                    {{ $category['name_' . $lang] }}
+                                </option>
                             @endforeach
                         </select>
                     </div>

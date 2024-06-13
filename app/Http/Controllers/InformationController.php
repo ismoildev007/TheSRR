@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\CategoryPortfolio;
 use App\Models\Information;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -24,7 +24,7 @@ class InformationController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = CategoryPortfolio::all();
         return view('admin.information.create')->with('categories', $categories);
     }
 
@@ -34,14 +34,14 @@ class InformationController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'category_id' => 'required|exists:categories,id',
+            'portfolio_id' => 'required|exists:category_portfolios,id',
             'title_uz' => 'required|string|max:255',
             'title_ru' => 'required|string|max:255',
             'title_en' => 'required|string|max:255',
             'description_uz' => 'nullable|string',
             'description_ru' => 'nullable|string',
             'description_en' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $data = $validated;
@@ -68,7 +68,7 @@ class InformationController extends Controller
      */
     public function edit(Information $information)
     {
-        $categories = Category::all(); // Need to pass categories to the view
+        $categories = CategoryPortfolio::all(); // Need to pass categories to the view
         return view('admin.information.edit', compact('information', 'categories'));
     }
 
@@ -79,14 +79,14 @@ class InformationController extends Controller
     public function update(Request $request, Information $information)
     {
         $validated = $request->validate([
-            'category_id' => 'required|exists:categories,id',
+            'portfolio_id' => 'required|exists:category_portfolios,id',
             'title_uz' => 'required|string|max:255',
             'title_ru' => 'required|string|max:255',
             'title_en' => 'required|string|max:255',
             'description_uz' => 'nullable|string',
             'description_ru' => 'nullable|string',
             'description_en' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $data = $validated;

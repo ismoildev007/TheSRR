@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('title_uz', 191)->unique();
             $table->string('title_ru', 191)->unique();
             $table->string('title_en', 191)->unique();

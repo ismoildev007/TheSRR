@@ -45,8 +45,8 @@ $lang = \Illuminate\Support\Facades\App::getLocale()
         <div class="logo-box">
             <!-- Brand Logo Light -->
             <a href="#" class="logo-light">
-                <img src="/assets/images/thesrr.png" alt="logo" class="logo-lg" height="28">
-                <img src="/assets/images/thesrr.png" alt="small logo" class="logo-sm" height="28">
+                <img src="/front/tash.png" alt="logo" class="logo-lg" height="28" style="width: 120px;">
+                <img src="/front/tash.png" alt="small logo" class="logo-sm" height="28" style="width: 120px;">
             </a>
 
             <!-- Brand Logo Dark -->
@@ -69,17 +69,6 @@ $lang = \Illuminate\Support\Facades\App::getLocale()
                         <span class="badge bg-primary rounded ms-auto">01</span>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="/admin/home" class="menu-link">
-                        <span class="menu-icon"><i class="bx bx-home-smile"></i></span>
-                        <span class="menu-text">Bosh saxifa</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="/admin/news" class="menu-link">
-                        <span class="menu-text">Blog</span>
-                    </a>
-                </li>
 
                 <li class="menu-item">
                     <a href="/admin/about" class="menu-link waves-effect waves-light">
@@ -88,9 +77,21 @@ $lang = \Illuminate\Support\Facades\App::getLocale()
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/admin/contact" class="menu-link">
+                    <a href="/admin/information" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bxs-book"></i></span>
+                        <span class="menu-text"> Portfolio </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/news" class="menu-link">
+                        <span class="menu-icon"><i class="bx bx-home-smile"></i></span>
+                        <span class="menu-text">Blog</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/category" class="menu-link">
                         <span class="menu-icon"><i class="bx bx-history"></i></span>
-                        <span class="menu-text">Contact</span>
+                        <span class="menu-text">Service Category</span>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -100,55 +101,28 @@ $lang = \Illuminate\Support\Facades\App::getLocale()
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/admin/information" class="menu-link waves-effect waves-light">
-                        <span class="menu-icon"><i class="bx bxs-book"></i></span>
-                        <span class="menu-text"> Ochiq malumotlar </span>
+                    <a href="/admin/contact" class="menu-link">
+                        <span class="menu-icon"><i class="bx bx-history"></i></span>
+                        <span class="menu-text">Contact</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="/admin/post" class="menu-link waves-effect waves-light">
                         <span class="menu-icon"><i class="bx bxs-book"></i></span>
-                        <span class="menu-text"> Postlar </span>
+                        <span class="menu-text"> Ko'p beriladigan savollar </span>
                     </a>
                 </li>
-
-                <li class="menu-title text-danger">Comming soon</li>
-
                 <li class="menu-item">
-                    <a href="#menuExpages" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
-                        <span class="menu-icon"><i class="bx bx-file"></i></span>
-                        <span class="menu-text"> Extra Pages </span>
-                        <span class="menu-arrow"></span>
+                    <a href="/admin/commit" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bxs-comment"></i></span>
+                        <span class="menu-text"> Foydalanuvchi sharxlari </span>
                     </a>
-                    <div class="collapse" id="menuExpages">
-                        <ul class="sub-menu">
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <span class="menu-text">Register</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <span class="menu-text">Recover Password</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <span class="menu-text">Lock Screen</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <span class="menu-text">Error 404</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <span class="menu-text">Error 500</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/internation" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bxs-info-square"></i></span>
+                        <span class="menu-text"> Ijtimoiy tarmoqlarimiz </span>
+                    </a>
                 </li>
             </ul>
         </div>

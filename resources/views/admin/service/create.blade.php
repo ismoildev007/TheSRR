@@ -35,16 +35,24 @@
                         </div>
                     </div>
 
-                    <div class="row ">
+                    <div class="row d-none">
                         <div class="col-md-4 mb-25 my-5 uz">
-                            <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_uz" placeholder="Text UZ">
+                            <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_uz" placeholder="Text UZ" value="Text">
                         </div>
                         <div class="col-md-4 mb-25 my-5 ru">
-                            <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_ru" placeholder="Text RU">
+                            <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_ru" placeholder="Text RU" value="Text">
                         </div>
                         <div class="col-md-4 mb-25 my-5 en">
-                            <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_en" placeholder="Text EN">
+                            <input type="text" class="form-control ih-medium ip-gray radius-xs b-light px-15" name="text_en" placeholder="Text EN" value="Text">
                         </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <label for="" class="form-label">Category name</label>
+                        <select name="category_id" class="form-control" id="">
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name_uz }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     {{-- description_uz --}}

@@ -24,8 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $postCategories = PostCategory::all();
-        return view('admin.post.create')->with('postCategories', $postCategories);
+        return view('admin.post.create');
     }
 
     /**
@@ -36,26 +35,16 @@ class PostController extends Controller
     {
 //        dd($request);
         $validated = $request->validate([
-            'post_category_id' => 'required|exists:post_categories,id', // jadval nomi to'g'ri kiritildi
             'title_uz' => 'required|string|max:191',
             'title_ru' => 'required|string|max:191',
             'title_en' => 'required|string|max:191',
             'description_uz' => 'nullable|string',
             'description_ru' => 'nullable|string',
             'description_en' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-//        dd($validated);
 
         // Valide qilingan ma'lumotlarni olib chiqdik
         $data = $validated;
-
-        // Tasdiqlangan ma'lumotlarni tekshirish uchun
-
-        // Faylni yuklash
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('post_photo');
-        }
 
         // Postni yaratish
         Post::create($data);
@@ -69,8 +58,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        $post_category = PostCategory::all();
-        return view('admin.post.show', compact('post_category'))->with('post', $post);
+        return view('admin.post.show')->with('post', $post);
     }
 
     /**
@@ -78,8 +66,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        $postCategories = PostCategory::all(); // Need to pass categories to the view
-        return view('admin.post.edit', compact('post', 'postCategories'));
+        return view('admin.post.edit', compact('post'));
     }
 
 
@@ -89,24 +76,15 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $validated = $request->validate([
-            'post_category_id' => 'required|exists:post_categories,id',
             'title_uz' => 'required|string|max:255',
             'title_ru' => 'required|string|max:255',
             'title_en' => 'required|string|max:255',
             'description_uz' => 'nullable|string',
             'description_ru' => 'nullable|string',
             'description_en' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $data = $validated;
-
-        if ($request->hasFile('image')) {
-            if ($post->image) {
-                Storage::delete($post->image);
-            }
-            $data['image'] = $request->file('image')->store('post_photo');
-        }
 
         $post->update($data);
 
@@ -118,10 +96,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        if ($post->image) {
-            Storage::delete($post->image);
-        }
-
         $post->delete();
 
         return redirect()->route('post.index')->with('success', 'Post deleted successfully.');

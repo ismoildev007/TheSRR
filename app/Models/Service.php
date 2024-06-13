@@ -10,6 +10,7 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
+        'category_id',
         'title_uz',
         'title_ru',
         'title_en',
@@ -21,4 +22,8 @@ class Service extends Model
         'description_en',
         'image',
     ];
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }

@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -23,7 +24,8 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('admin.service.create');
+        $categories = Category::all();
+        return view('admin.service.create')->with('categories', $categories);
     }
 
     /**
@@ -32,6 +34,7 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'category_id' => 'required|exists:categories,id',
             'title_uz' => 'required|string|max:255',
             'title_ru' => 'required|string|max:255',
             'title_en' => 'required|string|max:255',
@@ -68,7 +71,8 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        return view('admin.service.edit')->with('service', $service);
+        $categories = Category::all(); // Need to pass categories to the view
+        return view('admin.service.edit', compact('service', 'categories'));
     }
 
     /**
@@ -77,6 +81,7 @@ class ServiceController extends Controller
     public function update(Request $request, Service $service)
     {
         $validated = $request->validate([
+            'category_id' => 'required|exists:categories,id',
             'title_uz' => 'required|string|max:255',
             'title_ru' => 'required|string|max:255',
             'title_en' => 'required|string|max:255',

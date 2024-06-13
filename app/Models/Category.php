@@ -15,8 +15,8 @@ class Category extends Model
         'name_en',
     ];
 
-    public function information()
+    public function services()
     {
-        return $this->hasMany(Information::class);
+        return $this->hasMany(Service::class);
     }
 }

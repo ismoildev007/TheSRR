@@ -1,8 +1,9 @@
 <?php
 
 
-$lang = \Illuminate\Support\Facades\App::getLocale();$lang
+$lang = \Illuminate\Support\Facades\App::getLocale();
 
+$services = \App\Models\Service::all();
 
 ?>
 
@@ -16,6 +17,16 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
     <link rel="shortcut icon" href="/assets/images/thesrr.png">
 
     <title> Thesrr </title>
+
+    <!-- Vendor CSS Files -->
+    <link href="/front/assets/custom/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/front/assets/custom/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/front/assets/custom/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/front/assets/custom/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/front/assets/custom/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/front/assets/custom/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/front/assets/custom/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/front/assets/custom/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- animate.css-->
     <link href="/front/assets/vendor/animate.css-master/animate.min.css" rel="stylesheet">
@@ -41,8 +52,13 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
     <link href="/front/assets/vendor/owlcarousel/owl.theme.default.min.css" rel="stylesheet">
     <!-- FABLES CUSTOM CSS FILE -->
     <link href="/front/assets/custom/css/custom.css" rel="stylesheet">
+    <link href="/front/assets/custom/css/style.css" rel="stylesheet">
     <!-- FABLES CUSTOM CSS RESPONSIVE FILE -->
     <link href="/front/assets/custom/css/custom-responsive.css" rel="stylesheet">
+
+    <!-- Boshqa kerakli kutubxonalar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 
 </head>
 
@@ -83,7 +99,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
             <div class="col-12 col-md-10 pr-md-0">
                 <nav class="navbar navbar-expand-md btco-hover-menu py-lg-2">
 
-                    <a class="navbar-brand fables-logo-brand pl-0" href="index.html"><img src="/assets/images/thesrr.png" style="width: 100px;" alt="Fables Template" class="fables-logo"></a>
+                    <a class="navbar-brand fables-logo-brand pl-0" href="/"><img src="/front/tash.png" class="fables-logo" style="width: 150px;" alt="Fables Template"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fablesNavDropdown" aria-controls="fablesNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="fables-iconmenu-icon text-white font-16"></span>
                     </button>
@@ -92,45 +108,37 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
                         <ul class="navbar-nav mx-auto fables-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="/">
-                                    Home
+                                    {{ __('app.home') }}
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="/about">
-                                    About Us
+                                    {{ __('app.about') }}
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="/service">
-                                    Service
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="sub-nav5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Blog
+                                <a class="nav-link dropdown-toggle" href="/service">
+                                    {{ __('app.service') }}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="sub-nav5">
-                                    <li><a class="dropdown-item" href="blog-cat1.html">Blog Cat 1</a></li>
-                                    <li><a class="dropdown-item" href="blog-cat2.html">Blog Cat 2</a></li>
-                                    <li><a class="dropdown-item" href="blog-cat3.html">Blog Cat 3</a></li>
-                                    <li><a class="dropdown-item" href="blog-cat-masonry.html">Blog Cat Masonry</a></li>
-                                    <li><a class="dropdown-item" href="blog-details1.html">Blog Details 1</a></li>
-                                    <li><a class="dropdown-item" href="blog-details2.html">Blog Details 2</a></li>
-                                    <li><a class="dropdown-item" href="blog-details3.html">Blog Details 3</a></li>
-                                    <li><a class="dropdown-item" href="blog-single-img.html">Blog Single image</a></li>
-                                    <li><a class="dropdown-item" href="blog-single-slider.html">Blog Single Slider</a></li>
-                                    <li><a class="dropdown-item" href="blog-single-video.html">Blog Single Video</a></li>
-                                    <li><a class="dropdown-item" href="blog-timeLine.html">Blog Timeline</a></li>
+                                    @foreach($services as $service)
+                                        <li><a class="dropdown-item" href="{{ route('singleService', ['category' => $service->category_id]) }}">{{ $service->category['name_' . $lang] }}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
+                                <a class="nav-link" href="{{ route('blog')}}">
+                                    {{ __('app.blog') }}
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link" href="/contact">
-                                    Contact
+                                    {{ __('app.contact') }}
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="{{ route('portfolio') }}">
-                                    Portfolio
+                                    {{ __('app.portfolio') }}
                                 </a>
                             </li>
                         </ul>
@@ -144,10 +152,9 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
 
                     <div class="dropdown d-inline-block float-left float-md-none">
                         <a href="#_" class="fables-third-text-color dropdown-toggle px-4 fables-second-hover-color fables-mega-menu-btn position-relative" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            @if($lang === 'en')<img src="/assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" style="width: 35px;" height="18"> @endif
-                            @if($lang === 'ru')<img src="/assets/images/flags/russia.jpg" alt="user-image" style="width: 35px;" class="me-0 me-sm-1" height="18"> @endif
-                            @if($lang === 'uz')<img src="/assets/images/uzbek.svg" alt="user-image" class="me-0 me-sm-1" height="18"> @endif
-                            <span class="fables-cart-number fables-second-background-color text-center">3</span>
+                            @if($lang === 'en')<b>English / </b><img src="/assets/images/flags/us.jpg" alt="user-image" class="me-sm-1" style="width: 35px;" height="18"> @endif
+                            @if($lang === 'ru')<b>Russian / </b><img src="/assets/images/flags/russia.jpg" alt="user-image" style="width: 35px;" class="me-sm-1" height="18"> @endif
+                            @if($lang === 'uz')<b>Uzbek / </b><img src="/assets/images/uzbek.svg" alt="user-image" class="me-sm-1" height="18"> @endif
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated">
 
@@ -201,6 +208,14 @@ $lang = \Illuminate\Support\Facades\App::getLocale();$lang
 <script src="/front/assets/vendor/fancybox-master/jquery.fancybox.min.js"></script>
 <script src="/front/assets/custom/js/custom.js"></script>
 
+<!-- Vendor JS Files -->
+<script src="/front/assets/custom/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/front/assets/custom/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/front/assets/custom/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/front/assets/custom/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/front/assets/custom/vendor/php-email-form/validate.js"></script>
 
+<!-- Template Main JS File -->
+<script src="/front/assets/custom/js/main.js"></script>
 </body>
 </html>

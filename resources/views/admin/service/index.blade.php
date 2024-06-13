@@ -40,6 +40,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                     <tr>
                                         <th>Title {{ $lang }}</th>
                                         <th>Description {{ $lang }}</th>
+                                        <th>Category_name</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -48,6 +49,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                         <tr>
                                             <td>{{ $service['title_' . $lang] }}</td>
                                             <td class="truncate-multiline">{!! $service['description_' . $lang] !!}</td>
+                                            <td class="truncate-multiline">{!! $service->category['name_' . $lang] !!}</td>
                                             <td>
                                                 <div class="mx-1 d-inline-block">
                                                     <a href="{{ route('service.edit', $service->id) }}"><i class="mdi mdi-book-edit-outline fs-3"></i></a>

@@ -15,69 +15,44 @@ class CategorySeeder extends Seeder
         // Kategoriyalarni massiv ko'rinishida tuzamiz
         $categories = [
             [
-                'name_uz' => 'Litsenziya va sertifikat',
-                'name_ru' => 'Лицензия и сертификат',
-                'name_en' => 'License and certificate',
+                'name_uz' => 'Barcha turdagi chop etish',
+                'name_ru' => 'Все виды печати',
+                'name_en' => 'All types of printing',
             ],
             [
-                'name_uz' => 'Biznes reja',
-                'name_ru' => 'Бизнес-план',
-                'name_en' => 'Business plan',
+                'name_uz' => 'Ko\'rgazma dizayni',
+                'name_ru' => 'Выставочный дизайн',
+                'name_en' => 'Exhibition design',
             ],
             [
-                'name_uz' => 'Moliyaviy Hisobot',
-                'name_ru' => 'Финансовый отчет',
-                'name_en' => 'Financial Statement',
+                'name_uz' => 'To\'liq nterra dizayni bilan binolarni rekonstruksiya qilish',
+                'name_ru' => 'Реконструкция зданий с полным проектированием',
+                'name_en' => 'Reconstruction of buildings with full nterra design',
             ],
             [
-                'name_uz' => 'Kompaniya strategiyasi',
-                'name_ru' => 'Стратегия компании',
-                'name_en' => 'Company strategy',
+                'name_uz' => 'Mebel dizaynlari',
+                'name_ru' => 'Дизайн мебели',
+                'name_en' => 'Furniture designs',
             ],
             [
-                'name_uz' => 'Audutorlik hulosasi',
-                'name_ru' => 'Аудиторский отчет',
-                'name_en' => 'Audit report',
+                'name_uz' => 'Reklama orollari',
+                'name_ru' => 'Рекламные острова',
+                'name_en' => 'Advertising islands',
             ],
             [
-                'name_uz' => 'Affillangan shaxslar',
-                'name_ru' => 'Аффилированное лицо',
-                'name_en' => 'Affiliated Person',
+                'name_uz' => 'Mahsulot tokchalari',
+                'name_ru' => 'Стеллажи для продуктов',
+                'name_en' => 'Product racks',
             ],
             [
-                'name_uz' => 'Muhim faktlar',
-                'name_ru' => 'Важные факты',
-                'name_en' => 'Important facts',
+                'name_uz' => 'Tashqi reklama',
+                'name_ru' => 'Наружная реклама',
+                'name_en' => 'Outdoor advertising',
             ],
             [
-                'name_uz' => 'Ustav',
-                'name_ru' => 'Устав',
-                'name_en' => 'Charter',
-            ],
-            [
-                'name_uz' => 'Yuridik shaxs guvohnomasi',
-                'name_ru' => 'Юридическое удостоверение личности',
-                'name_en' => 'Legal identity card',
-            ],
-            [
-                'name_uz' => 'Aksiyadorlar qarori',
-                'name_ru' => 'Решение акционеров',
-                'name_en' => 'Resolution of shareholders',
-            ],
-            [
-                'name_uz' => 'Dvidentlar to\'lash',
-                'name_ru' => 'Выплата дивидендов',
-                'name_en' => 'Payment of dividends',
-            ],
-            [
-                'name_uz' => 'Aksiyalarni sotib olish',
-                'name_ru' => 'Покупка акций',
-                'name_en' => 'Purchase of shares',
-            ],
-            [
-                'name_uz' => 'Korporativ boshqaruv',
-                'name_ru' => 'Корпоративное управление',
-                'name_en' => 'Corporate governance',
+                'name_uz' => 'Axborot belgilari va stendlari',
+                'name_ru' => 'Информационные таблички и стенды',
+                'name_en' => 'Information signs and stands',
             ],
         ];
 

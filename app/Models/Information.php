@@ -10,7 +10,7 @@ class Information extends Model
     use HasFactory;
 
     protected $fillable = [
-        'category_id',
+        'portfolio_id',
         'title_uz',
         'title_ru',
         'title_en',
@@ -22,6 +22,6 @@ class Information extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(CategoryPortfolio::class, 'portfolio_id');
     }
 }
